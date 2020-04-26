@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="/static/main-orange.css" type="text/css">
+        <title>{{ title }}</title>
+    </head> 
+<body>
+    <h1>{{ title }}</h1> 
+    <form action="/save" method="post">
+        <table class="form-table">
+            <tbody>
+            <tr>
+                <tr>
+                    <th><label for="start" class="koumoku">{{first}}</label></th>
+                    <td><input id="start" type="text" name="start"/></td>
+                </tr>
+                <tr>
+                    <th><label for="finish" class="koumoku">{{finish}}</label><br/></th>
+                    <td><input id="finish" type="text" name="finish"/> </td>
+                </tr>
+                <tr>
+                    <th><label for="memo" class="koumoku">{{memo}}</label></th>
+                    <td><textarea id="memo" name="memo"></textarea></td>
+                </tr>
+            </tr> 
+            </tbody>
+        </table>
+        <br/>
+        <button><a class="btn-square-so-pop">追 加</a></button>
+        <button type="submit" formaction="/delete" formmethod="POST"><a class="btn-square-so-pop">削 除</a></button>
+    </form>
+    
+    <h3>一覧</h3>
+    <table class="list">
+        <tr>
+            <th class="koumoku" width="120">日時</th>
+            <th class="koumoku">{{first}}</th>
+            <th class="koumoku">{{finish}}</th>
+            <th class="koumoku">{{memo}}</th>
+        </tr>
+        {% for ride in rides %}
+        <tr>
+            <td>{{ ride.create_at }}</td>
+            <td>{{ ride.start }}</td>
+            <td>{{ ride.finish }}</td>
+            <td>{{ ride.memo|nl2br }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
