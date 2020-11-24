@@ -10,7 +10,7 @@ DATA_FILE = "datafile.json"
 def save_data(start, finish, memo, create_at):
     """
     saved data 
-    start : 食品名
+    start : 食品名aaaaa
     finish : 消費期限
     memo : メモ
     create_at : 作成日
