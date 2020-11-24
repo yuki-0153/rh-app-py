@@ -52,7 +52,7 @@ def delete_all_logs():
 
 # 項目表示用
 title = "消費期限管理表"
-name1 = "食品名aa"
+name1 = "食品名"
 name2 = "消費期限"
 memo = "メモ"
 
