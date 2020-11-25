@@ -53,7 +53,7 @@ def delete_all_logs():
 # 項目表示用
 title = "管理表"
 name1 = "車種"
-name2 = "製造日"
+name2 = "製造年月日"
 memo = "メモ"
 
 @app.route("/")
