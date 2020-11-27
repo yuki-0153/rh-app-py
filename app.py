@@ -51,9 +51,9 @@ def delete_all_logs():
     
 
 # 項目表示用
-title = "食品管理"
-name1 = "食品名"
-name2 = "消費期限"
+title = "自動車"
+name1 = "車種"
+name2 = "色"
 memo = "メモ"
 
 @app.route("/")
