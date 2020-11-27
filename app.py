@@ -10,7 +10,7 @@ DATA_FILE = "datafile.json"
 def save_data(start, finish, memo, create_at):
     """
     saved data 
-    start : 食品名aaaaa
+    start : 食品名
     finish : 消費期限
     memo : メモ
     create_at : 作成日
@@ -51,9 +51,9 @@ def delete_all_logs():
     
 
 # 項目表示用
-title = "管理表"
-name1 = "車種"
-name2 = "製造年月日"
+title = "食品管理"
+name1 = "食品名"
+name2 = "消費期限"
 memo = "メモ"
 
 @app.route("/")
